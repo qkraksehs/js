@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크린객체</title>
+</head>
+<body>
+    <script>
+        // 화면 너비값
+        let screenWidth = screen.width;
+        document.write(`screenWidth = ${screenWidth}`);
+
+        // 화면 높이값
+        let screenHeight = screen.height;
+        document.write(`<br>screenHeight = ${screenHeight}`);
+    </script>
+
+    <h2>navigator 객체 - 디바이스 정보</h2>
+    <script>
+        let codeName = navigator.appCodeName;
+        document.write(`codeName = ${codeName}`);
+
+        let appName = navigator.appName;
+        document.write(`<br>appName = ${appName}`);
+
+        // 제조사 정보
+        let product = navigator.product;
+        document.write(`<br>product = ${product}`);
+
+        // 플랫폼 정보(운영체재) Win(윈도우)ㅣMac(맥)
+        let platform = navigator.platform;
+        document.write(`<br>platform = ${platform}`);
+
+        // 모든 정보를 참조
+        let userAgent = navigator.userAgent;
+        document.write(`<br>userAgent = ${userAgent}`);
+    </script>
+    <!-- 최초의 GUI 기반 웹 브라우저 = 모자이크 -->
+    
+</body>
+</html>

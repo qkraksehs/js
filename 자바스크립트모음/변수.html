@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수</title>
+</head>
+
+<body>
+    <script>
+        // var 변수 선언(레이블링-의미있게 작성)
+        var bag;
+
+        // bag변수에 값을 넣기(= 대입)
+        bag = "향수"; // 문자 "값"
+        document.write(bag);
+
+        // 다른 값을 넣읍시다
+        bag = 999999;     // 숫자
+        document.write(bag)
+
+        // 변수를 선언하면서 값을 넣기
+        var box = '사과';
+        document.write(box)
+
+        box = '당근'
+        document.write(box)
+
+        // 더하기
+        var a = 1; // 숫자
+        a = "1"; //문자
+        document.write(a + 3)
+        // 문자는 더하기 안됨
+
+        // 논리형
+        document.write('<br>');
+        document.write(1 < 3); //논리형
+        
+    </script>
+    <br>
+    <script>
+        var a = true;
+        var b = false;
+        var c = 10 > 5; //true
+        var d = Boolean(null); //false
+        document.write(a, "<br>")
+        document.write(b, "<br>")
+        document.write(c, "<br>")
+        document.write(d, "<br>")
+    </script>
+</body>
+
+</html>

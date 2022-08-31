@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디지털시계</title>
+    <style>
+        #clock {
+            background: #666;
+            border: 5px solid #000;
+            display: inline-block;
+            padding: 5px 20px;
+            font-size: 80px;
+            font-family: 'digital';
+            border-radius: 10px;
+            color: rgb(20, 30, 32);
+            text-align: center;
+        }
+
+        @font-face {
+            font-family: 'digital';
+            src: url(./RepetitionScrolling.ttf);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        # 필요한 메서드
+        1.시간 정보를 알아야 됨 Date()
+        2.프로그램이 주기적으로 실행 되야함(1초마다) - setInterval()
+        3.시간 정보를 표시 document 객체 DOM
+
+        # 작업 순서
+        1.시계를 디자인 HTML + CSS
+        2.시계기능 구현 - Javascript
+     -->
+
+    <div id="clock">
+        <span id="hour">00</span> :
+        <span id="min">00</span> :
+        <span id="sec">00</span>
+    </div>
+
+    <script>
+        setInterval(function () {
+            //  여기다 코드 넣기
+            let d = new Date();
+            let h = d.getHours(); // 시간
+            let m = d.getMinutes(); // 분
+            let s = d.getSeconds(); // 초
+            
+
+            //  시간 정보를 #hour에 표시
+            document.getElementById('hour').innerHTML = h
+            //  분 표시
+            document.getElementById('min').innerHTML = m
+            //  초 표시
+            document.getElementById('sec').innerHTML = s
+        });
+
+        
+
+
+    </script>
+</body>
+
+</html>

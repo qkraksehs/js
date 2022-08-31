@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜객체</title>
+</head>
+<body>
+    <script>
+        // Date객체에서 새로운 시간값
+        const d = new Date();
+        document.write('<br>',d);
+
+        // getFullYear() 년도
+        let year = d.getFullYear();
+        document.write('<br>year = ',year);
+
+        // 月(0...11) 보정값 +1 필요함
+        let month = d.getMonth();
+        document.write('<br>month = ', month+1);
+
+        // 日(1~31)
+        let date = d.getDate();
+        document.write('<br>date = ', date);
+
+        // 요일(day) 0...6 번역이 필요함
+        let day = d.getDay();
+        document.write('<br>day = ', day);
+
+        // 시
+        let hour = d.getHours();
+        document.write('<br>hour = ',hour);
+
+        // 분
+        let min = d.getMinutes();
+        document.write('<br>min = ',min);
+
+        // 초
+        let sec = d.getSeconds();
+        document.write('<br>sec = ',sec);
+
+        // "현재시각은 *시 *분 *초 입니다."
+        // document.write('<br>현재시각은',hour,'시 ',min,'분 ',sec,'초 ','입니다');
+        let text = `현재시각은 ${hour}시 ${min}분 ${sec}초 입니다.`;
+        document.write('<br>',text);
+
+        // 2002월드컵 특정 시간 정보 가져오기
+        var worldcup = new Date(2002,4,31);
+        var theMonth = worldcup.getMonth();
+        document.write(`<br>2002월드컵 월:${theMonth + 1}`);
+
+        // 해당 시간대의 요일?
+        var theDay = worldcup.getDay();
+        document.write(`<br>2002월드컵 요일:${theDay}`);
+
+        /* 템플릿 리터럴 문법``:"문자"와 ${변수} 한번에 출력 */
+        let name = '홍길둥';
+        document.write(`<br>내 이름은 ${name} 입니다`,);
+    </script>
+
+    <script>
+        // ms 밀리세컨트(1/1000초)
+        let ms = d.getMilliseconds();
+        document.write(`<br> ms = ${ms}`);
+    </script>
+    <h2>남은날 계산하기</h2>
+    <script>
+        let today = new Date(); // 현재
+        let nowYear = today.getFullYear();
+
+        let theDate = new Date(nowYear,11,31); //년말일
+
+        // 남은날 = theDate - today
+        let diffDate = theDate.getTime() - today.getTime();
+        console.log(theDate.getTime() - today.getTime());
+
+        // 남은날수 시간값 환산
+        let result = Math.ceil(diffDate / (1000*60*60*24));
+        document.write(`연말까지 ${result}일 남음`)
+    </script>
+</body>
+</html>

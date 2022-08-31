@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 2px solid red;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        /*
+           while(true)) 일때 실행 - false면 끝남
+        */
+        var i = 1; // 초기값
+
+        // i값이 10 일때까지 실행됨
+        while (i <= 10) {
+            document.write('<br>안녕하세요' + i);
+            i++; // 카운트 1씩 증가
+        }
+
+        // 배수
+        i = 1;
+        while (i <= 30) {
+            // 2와 6의 배수일 경우
+            if (i % 2 == 0 && i % 6 == 0) {
+                document.write('<br>', i);
+            }
+            i++; // 카운트 증가
+        }
+    </script>
+    <h2>★for 반복문★</h2>
+    <script>
+        for (let i = 1; i <= 10; i++) {
+            console.log(i);
+            document.write('<br>반복', i);
+        }
+    </script>
+    <h2>자바스크립트로 박스 여러개 출력하기</h2>
+    <script>
+        let box_length = 6;
+        for (let i = 1; i <= box_length; i++) {
+            document.write('<p class="box">box</p>');
+        }
+
+    </script>
+    <h2>break 문 - 중단하기, continue 문 - 건너뛰기</h2>
+    <script>
+        // break
+        for (let i = 1; i <= 10; i++) {
+            if (i == 6) break;
+            document.write('<br>', i);
+        }
+
+        //  continue
+        for (let i = 1; i <= 10; i++) {
+            if (i == 6) continue;
+            document.write('<br>', i);
+        }
+    </script>
+    <h2>중첩 for 문</h2>
+    <script>
+        document.write('<hr>');
+        for (let j=1; j<=5; j++) {
+            for(let i=1; i<=10; i++) {
+                document.write('😜');
+            }
+           document.write('<br>');
+        }
+    </script>
+    <script>
+        let life = 6;
+        const 물약 = 3; // 회복치 +3
+        life += 물약; // 물약 먹음
+        
+        document.write('생명치: ');
+        // for 문 으로 생명치 박스 표시하기
+         for (let i=1; i<=10; i++){
+             if(i <= life) {
+            document.write('■');
+         } else {
+             document.write('□')
+         }
+        }
+       
+    </script>
+
+</body>
+
+</html>

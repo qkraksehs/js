@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수학객체</title>
+</head>
+<body>
+    <script>
+        const pi = Math.PI; //원주율 값
+        document.write(`<br>pi = ${pi}`);
+
+        // 큰 값 구하기 .max(값1, 값2, ...)
+        let 큰값 = Math.max(10, 5);
+        document.write(`<br>큰값 = ${큰값}`)
+
+        // 작은 값 구하기 .min(값1, 값2, ...)
+        let 작은값 = Math.min(28,24);
+        document.write(`<br>작은값 = ${작은값}`);
+
+        // 7, 9, 12 의 값중에서 가장 큰값을 구하시오.
+        let 가장큰값 = Math.max(7, 9, 12);
+        document.write(`<br>가장큰값 = ${가장큰값}`);
+
+        // 숫자를 정수로
+        // Math.round(값) 반올림
+        let num = 4.2;
+        let roundNum = Math.round(num);
+        document.write(`<br>반올림 = ${roundNum}`);
+
+        //Math.celi() 무조건 올림
+        
+        let ceilNum = Math.ceil(num);
+        document.write(`<br>ceilNum = ${ceilNum}`);
+
+        // Math.floor() 무조건 내림
+        let floorNum = Math.floor(num);
+        document.write(`<br>floorNum = ${floorNum}`);
+
+        // 난수발생시키기 Math.random()
+        let r = Math.random() * 10;
+        document.write(`<br>r = ${r}`);
+
+        // 1에서 10 사이의 난수 발생
+        // 공식: Math.random() * 최대값 + 최소값
+        r = Math.floor(Math.random() * 100 + 1);
+        document.write(`<br>r = ${r}`);
+    </script>
+</body>
+</html>

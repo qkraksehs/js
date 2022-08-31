@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수복습</title>
+</head>
+<body>
+    <script>
+        // 1. 함수 선언 dog(메개변수)
+        function dog(name) {
+            document.write('<br>' + name + '(이)가 멍멍');
+        }
+
+        // 2. 함수 표현적
+        const cat = function() {
+            document.write('<br>냐옹');
+        }
+
+        // 함수 호출
+        
+        dog('댕댕이');
+        dog('몽몽이');
+
+        cat();
+        cat();
+        dog();
+
+        /* 함수의 생명주기
+        - 함수는 실행이 되고 끝나면 그 안의 모든 내용은 사라짐
+        */
+        let name = '박길동'; // 전역변수(모든 영역에서 사용)
+
+        function hello() {
+            let name2 = '이점재';
+            return name2 + ' 받으시오'; // 함수가 값을 꺼내줌
+        }
+        
+        document.write(`<br>name = ${name}`);
+
+        hello();
+        // 함수 내의 변수는 실행이 끝나면 사라짐
+        // document.write(`<br>함수안의 name2 = ${name2}`);
+
+        // 함수값 확인하기
+        let 함수값 = hello();
+        document.write(`<br>함수값 = ${함수값}`);
+
+        // 더하기 함수 add(num1, num2)
+        function add(num1, num2) {
+            return num1 - num2;
+        }
+
+        let result = add(2, 4);
+        document.write(`<br>result = ${result}`);
+
+        // 면적을 구하는 함수 getArea(width, height)
+        function getArea(width, height){ 
+            return width * height;
+        }
+
+        result = getArea(30, 50);
+        document.write(`<br>면적 result = ${result}`);
+
+        function rect(width, height) {
+            let html =
+            `<p style="border: 2px solid #000; width:${width}; height: ${height}"></p>`;
+            document.write(html);
+            return width + height;
+        }
+
+        rect('200px', '100px');
+        result = rect('100px', '100px');
+        document.write(`rect = ${result}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수의 타입</title>
+</head>
+<body>
+    <script>
+        // 숫자냐? 문자냐? -> 데이터 type
+        var a = 9; // number
+        
+        a = "hello"; // string
+        document.write(typeof a, '<br>');
+
+        // 더하기(+)
+        a = 10;
+        document.write(a + a, '<br>');
+
+        // 문자를 연결(+)
+        a = "hello";
+        document.write(a + a, '<br>');
+
+        // 변수 선언시 주의사항
+        // 숫자가 먼저 들어갈 수 없음
+        // 특수문자는 $, _ 만 허용
+        // 변수는 의미있게 정의
+        // 대소문자 구분(기본은 소문자)
+        // 같은 변수를 중복 선언하면 안됨
+        var name1;
+        var $name;
+        var _name;
+        var box;
+        var Box;
+
+        // 엄격한 변수 선언(ES6)
+        let box2;
+
+        // const 산수값(변경불가)
+        const pi = 3.141592;
+        // pi = 999; <<에러
+    </script>
+    <h2>연산자</h2>
+    <script>
+        /*
+        +  더하기
+        -  빼기
+        *  곱하기
+        /  나누기
+        %  나머지
+        */
+       let num1 = 3;
+       let num2 = 5;
+
+       let result = num1 + num2 ;
+       document.write(result);
+
+       result = num1 - num2 ;
+       document.write('<br>',result);
+
+       result = num1 * num2 ;
+       document.write('<br>',result);
+
+       result = num1 / num2;
+       document.write('<br>',result);
+
+       result = num2 % num1;
+       document.write('<br>',result );
+
+       // + 문자를 연결함
+       let t1 ='ㅅㅀ ' ;
+       let t2 ='ㅎㄱㄷ';
+       document.write('<br>',t1 + t2);
+       document.write('<br>', 100 + "100");
+
+       //45p 연습
+
+       
+    </script>
+
+    <script>
+
+        var t3 = '학교종이';
+        var t4 = '땡땡떙';
+        var t5 = 8282;
+        var t6 = '어서모이자';
+        var result;
+
+        result = t3 + t4 + t5 + t6;
+        document.write(result);
+
+    </script>
+</body>
+</html>

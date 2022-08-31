@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+
+<body id="theBody">
+    <script>
+        // 함수 선언하기
+        function hello() {
+            document.write(`<br>Hello 함수!`);
+        }
+
+        // 함수 호출
+        hello();
+
+        // 함수 표현식 - 변수에 함수를 입력 (변수명=함수명)
+        const dog = function () {
+            document.write(`<br>멍멍!`);
+        }
+
+        dog();
+
+        const cat = function () {
+            document.write(`<br>냐옹~`);
+        }
+        // 변수나 함수를 먼저 선언 후 밑에서 사용(호출)
+        cat();
+        dog();
+
+        // 133p
+        let count = 0;
+
+        function myFnc() {
+            count++;
+            document.write('<br>hello' + count);
+        }
+
+        myFnc();
+        myFnc();
+        myFnc();
+
+        // 물약 먹으면 체력 증가됨
+        let hp = 100; // 초기 만땅 수치
+        let monster_damage = 10; // 몬스터 공격력
+
+        function potion() {
+            hp += 20;
+            document.write(`<br>물약먹음. hp가 ${20}회복됐습니다. hp = ${hp}`);
+        }
+
+        function game() {
+            // hp = hp - monster_damage;
+            hp -= monster_damage; // hp 10 감소
+            document.write(`<br>몬스터의 공격을 ${monster_damage}만큼 받았습니다. 현재hp = ${hp}`)
+        }
+
+        game();
+        game();
+        game();
+        // 회복
+        potion();
+
+    </script>
+    <hr>
+    <button onclick="changeColor()">배경색 바꾸기</button>
+    <script>
+        // 버튼 누르면 배경색 바뀜
+        let color = ['white', 'yellow', 'aqua', 'purple', 'lightblue'];
+        let i = 0; // 배열변수
+
+        // 함수
+        function changeColor() {
+            i++;
+            // 마지막 배열이면 처음으로 돌아감
+            if (i >= color.length) {
+                i = 0;
+            }
+            // getElemntByID(): id로 선택 메소드
+            // 스타일 변경: 객체명.style.스타일속성 = 속성값
+            const theBody = document.getElementById('theBody');
+            theBody.style.backgroundColor = color[i];
+        }
+    </script>
+    <hr>
+    <h2>함수의 매개변수</h2>
+    <script>
+        function 자기소개(name, area) {
+            document.write(`<br>안녕하세요. 저는 ${area}에 사는 ${name} 입니다.`);
+        }
+        자기소개('박당무', '김포');
+        자기소개('박두기', '제주도');
+
+        // 요리 함수
+        function 볶음밥(재료1, 재료2, 재료3) {
+            // 밥이 없으면...
+            if (재료1 != '밥' && 재료2 != '밥' && 재료3 != '밥') {
+                document.write('<br>밥이 없어요');
+            } else {
+                document.write(`<br>${재료1}과${재료2}그리고 ${재료3}으로 볶음밥을 만들었습니다.`);
+            }
+
+        }
+
+        볶음밥('물', '빵', '햇반');
+    </script>
+</body>
+
+</html>

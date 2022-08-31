@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열객체</title>
+    <style>
+        h1 {
+            background-color: #333;
+            width: 200px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>String 객체</h1>
+    <script>
+        let text = 'hello javascript'
+
+        // 글자의 개수 알아내기 - length
+        document.write(`<br>text length = ${text.length}`);
+
+        // 200자 까지만 쓰세요!
+        if(text.length > 200) {
+            alert('200자 까지만 입력 해주세요.');
+        }
+
+        // 특징 문자의 위치 알려줌 - indexOf()
+        text = 'hello world, welcome to the jungle^^7';
+        result = text.indexOf('welcome');
+        document.write(`<br>result = ${result}`);
+
+        // match() - 특정 문자 찾기, 없으면 null
+        result = text.match('welcoe');
+        document.write(`<br>result = ${result}`);
+
+        // replace() - 문자 교체하기
+        result = text.replace('jungle', 'universe');
+        document.write(`<br>result = ${result}`);
+
+        // substring(start index, end index-1) - 문자 잘라오기
+        result = text.substring(0,20
+        );
+        document.write(`<br>result = ${result}`);
+
+        // 대소문자 변환
+        text = 'hello world';
+        result = text.toUpperCase();
+        document.write(`<br>result = ${result}`);
+
+        // 문자열을 배열로 변환
+        let newArr = text.split(' '); // 공백을 기준으로
+        document.write(`<br>newArr = ${newArr[0]}`);
+        document.write(`<br>newArr = ${newArr[1]}`);
+
+        // 예제 109p
+        let userName = 'john doe' // 소문자 입력
+        let upperName = userName.toUpperCase(); // 대문자로
+        document.write(`<br>${upperName}`);
+
+        let userNum = '01071917711' // 전화번호
+        result = userNum.substring(0, 7,);
+        document.write(`<br>${result}****`);
+    </script>
+</body>
+</html>

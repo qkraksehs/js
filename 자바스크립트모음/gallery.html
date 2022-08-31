@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery</title>
+</head>
+<body>
+    <div id="galleryZone">
+        <p>
+            <img src="./images/pic_1.jpg" id="photo"alt="">
+        </p>
+        <button onclick="gallery(0)">이전</button>
+        <button onclick="gallery(1)">다음</button>
+    </div>
+
+    <script>
+        /* 총 6장의 이미지 갤러리 기능으로 수정 하세요.
+           -> 이미지 3장 추가, 기능 수정... 
+           */
+        let num = 1;  // 이미지 파일번호
+        //  direct: 0 = 이전, 1 = 다음
+        function gallery(direct) {
+            if(direct == 1) {
+             // 다음 이미지
+             if(num == 6) return; // 마지막 이미지면 함수 종료
+             num ++;
+            } else {
+             // 이전 이미지
+             if(num == 1) return;
+             num --;
+            }
+            let imgTag = document.getElementById('photo');
+            imgTag.setAttribute('src', `images/pic_${num}.jpg` )
+        }
+    </script>
+</body>
+</html>

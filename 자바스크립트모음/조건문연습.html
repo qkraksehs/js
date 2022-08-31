@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문연습</title>
+</head>
+
+<body>
+    <script>
+        let hour = 9;
+        // 참일때만 실행
+        if (hour) {
+            document.write('입실시간');
+        }
+
+        // 참일때, 거짓일때 분기 실행(조건분기)
+        let money = 10000;
+        money = money - 5000;  //  현재 금액에서 -5000
+        console.log(money);
+        money -= 5000;
+        console.log(money);
+        if (money < 10000) {
+            document.write('<br>잔고가 부족합니다.');
+        } else {
+            document.write('<br>출금이 가능합니다.');
+        }
+        let greeting = ''; // 인사 변수
+        let time; // 시간 변수
+        // if else if
+
+        if (time < 10) {
+            greeting = '좋은 아침';
+
+        } else if (time < 20) {
+            greeting = '좋은 하루';
+
+        } else {
+            greeting = '즐거운 밤 되세요.';
+
+        }
+        // 문서에 인사말 출력하기
+        document.write('<br>', greeting);
+
+    </script>
+    <h2>시험 평가 기준</h2>
+    <script>
+        // 시험 pass 조건 60점 이상이면 합격 아니면 불합격
+        let pass = 100;
+        if (pass >= 60) {
+            document.write('<br>합격');
+        } else {
+            document.write('<br>불합격');
+        }
+    </script>
+    <h2>if문으로 요일 판별하기</h2>
+    <script>
+        let d = new Date(); // 시간값
+        let today = d.getDay();
+        console.log('today = ', today);
+        // 오늘 요일 판별하기
+        if (today == 0) {
+            document.write('<br>일요일');
+        } else if (today == 1) {
+            document.write('<br>월요일');
+        } else if (today == 2) {
+            document.write('<br>화요일');
+        } else if (today == 3) {
+            document.write('<br>수요일');
+        } else if (today == 4) {
+            document.write('<br>목요일');
+        } else if (today == 5) {
+            document.write('<br>금요일');
+        } else if (today == 6) {
+            document.write('<br>토요일');
+        }
+    </script>
+
+    <!-- switch문 으로 요일 판별하기 -->
+    <script>
+        let day;
+        switch (today) {
+            case 0:
+                day = '일요일';
+                break;
+            case 1:
+                day = '월요일';
+                break;
+            case 2:
+                day = '화요일';
+                break;
+            case 3:
+                day = '수요일';
+                break;
+            case 4:
+                day = '목요일';
+                break;
+            case 5:
+                day = '금요일';
+                break;
+            case 6:
+                day = '토요일';
+                break;
+
+        }
+        document.write('<br>', day); 
+    </script>
+    <h2>switch문 으로 입력한 사이트로 이동하기</h2>
+    <script>
+        var site = prompt('네이버, 다음, 네이트, 구글 중 즐겨 사용하는 포털 검색 사이트는?',""); // 입력값
+        var url; // 이동한 주소값 변수
+
+        switch (site) {
+            case '구글':
+                url = "www.google.com";
+                break;
+            case '다음':
+                url = "www.daum.net";
+                break;
+            case '네이버':
+                url = "www.naver.com";
+                break;
+            case '네이트':
+                url = "www.nate.com";
+                break;
+            default: alert('보기 중에 없는 사이트입니다.');
+        }
+        if (url) location.href = "http://" + url;
+
+    </script>
+</body>
+
+</html>

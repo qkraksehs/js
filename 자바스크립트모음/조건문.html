@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문</title>
+</head>
+<body>
+    <script>
+        let hour =17;
+        // 참이면 실행 거짓이면 실행 안함
+        if (hour < 18) {
+            
+            document.write('<br>','좋은 하루!');
+        }
+        hour = 12;
+        // if else 참이면, 거짓이면 조건 분기
+        if(hour < 12) {
+            // true
+            document.write('<br>','좋은 아침');
+        } else {
+            // false
+            document.write('<br>','아침 햇살');
+        }
+        hour = 12;
+        // 9시면 알람을 울리기
+        if(hour == 9) {
+            alert('기상기상 때르릉~~~')
+        }
+          
+        // 62p
+        // var walkAmount = prompt("당신의 하루 걷는 양은 몇 보 인가요?","0");
+
+        // if(walkAmount >= 10000) {
+        //     document.write('<br>',"매우 좋은 습관을 지니고 계시는군요!","<br>");
+        // }
+        // document.write('<br>',"=========== The End ===========");
+
+        // 나머지 값이 0이면 짝수 아니면 홀수
+        // var num = prompt("당신이 좋아하는 숫자는?",'0');
+        // if(num % 2 == 0) {
+        //     document.write('<br>',"당신이 좋아하는 숫자는 짝수입니다.");
+        // } else {
+        //     document.write('<br>',"당신이 좋아하는 숫자는 홀수입니다.");
+        // }
+        // confirm() 확인(true)/취소(false) 창
+        var result = confirm("정말로 탈퇴하시겠습니까?")
+        console.log(result);
+        if(result) {
+            document.write('<br>','탈퇴 처리 됨');
+        } else {
+            document.write('<br>','취소 되었습니다^^');
+        }
+        let time = 12;
+        //  if ~ else if 비교할것이 많을때
+        if (time < 10) {
+            greeting = "좋은아침";
+        } else if (time < 20){
+            greeting = "좋은하루";
+        } else {
+            greeting = "좋은저녁";
+        }
+    </script>
+</body>
+</html>

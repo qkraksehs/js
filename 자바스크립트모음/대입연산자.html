@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대입연산자</title>
+</head>
+
+<body>
+    <h1>대입연산자</h1>
+    <script>
+        // a=b; a에 b값을 대입
+        var a, b;
+        b = 3;
+        a = b;
+        document.write('<br>a=', a);
+
+        // +=
+        var x = 10;
+        x = x + 5; // x 에 5를 더함
+        x += 5; // 위에거 줄여서 씀
+        document.write('<br>x+5=', x);
+
+        // -=
+        var y = 20;
+        y = y - 5;
+        y -= 5;
+        document.write('<br>y - 5 =', y);
+    </script>
+    <h2>자바스크립트에서 태그 생성</h2>
+    <script>
+        var html = "";
+        html = "<table border='1'>";
+        html += "<tr>";
+        html += "<td>1</td><td>2</td>";
+        html += "</tr>";
+        html += "</tdble>";
+        document.write(html);
+        // html = "hello!";
+        // document.write('<br>',html);
+        // html += "new hello!";
+        // document.write('<br>',html);
+
+    </script>
+    <script>
+        var h2 = "";
+        var p = "";
+        h2 += "<h2>대입연산자 연습</h2>";
+        p += "<p>다양한 연산자를 연습해보세요</p>";
+        document.write(h2 + p)
+    </script>
+
+    <h2>증강연산자</h2>
+    <script>
+        let count = 0;
+        count = count + 1 ; // 1증가
+        document.write(count);
+        count++; // 증강연산자 문법
+    </script>
+</body>
+
+</html>

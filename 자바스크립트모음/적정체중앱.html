@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>적정체중앱</title>
+</head>
+<body>
+    <h1>BMI 앱</h1>
+    <script>
+        // 1.입력
+        let name = prompt("당신의 이름은?")
+        console.log(name);
+        let height = prompt("당신의 키는?","0") // 신장
+        let weight = prompt("당신의 체중은?","0") // 체중
+        
+        // 2.처리: 평체 = (신장 - 100) * 0.9
+        let normal_w = (height - 100) * 0.9;
+        var result = weight >= normal_w -5 && weight <= normal_w + 5; // 오차범위 플마5
+        result = result ?" 적정 체중 " : "돼지" //결과 비교
+
+        // 3.출력
+        console.log(normal_w)
+        document.write(name +" 님은"+ result);
+    </script>
+    <hr>
+    
+</body>
+</html>

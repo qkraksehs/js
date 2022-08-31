@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+    <style>
+        * {
+            margin: 10;
+        }
+        .java {
+            border: 1px solid black;
+            width: 300px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>객체(object)</h1>
+    <!-- 
+        사물을 추상화하여 자료화하는 개념
+        예) 사람(오브젝트): 머리, 몸통, 팔 ,다리, 이름
+            자동차(오브젝트): 프레임, 바퀴, 색상, 모델명
+
+        문법표현) 사람.머리, 자동차.모델
+     -->
+     <script>
+        //  car 변수
+        let car_model = 'sonata';
+        let car_color = 'gray';
+        let car_wheel = 4;
+        let car_body = '1,000kg';
+
+        document.write(car_model);
+
+        // car 객체 변수(object)
+        let car = {
+            model: 'sonata',
+            color: 'gray',
+            wheel: 4,
+            body: '1,000kg'
+        }
+
+        // 객체 변수 car 표시
+        document.write('<br>',car.body);
+
+        // 변수(속성)은 값을 가짐
+        // 함수(메서드)는 어떤 값을 처리하여 실행()
+
+     </script>
+
+     <p class="java">자바스크립트 내장객체 웹브라우저의 주요 내장된 기능을 작동시키기 위해 필요한 함수들을 의미함. <br>
+    다른 말로는 <strong>API</strong>라고 함.</p>
+    
+    <script>
+        // 객체
+        var tv = {
+            color: 'white',
+            price: 300000,
+            info: function(){
+                document.write('<br>',this.color);
+            }
+        };
+
+        // tv.color의 값 변경
+        tv.color = 'pink';
+
+        // tv객체의 price 값
+        document.write(tv.price,'<br>');
+
+        // tv객체의 info 함수(메서드)
+        tv.info();
+    </script>
+</body>
+</html>

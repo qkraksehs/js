@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>브라우저객체</title>
+    <style>
+        #clock {
+            background: #ccc;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading1">제목을 자바스크립트로 변경</h1>
+    <section>
+        <h2>section title</h2>
+        <p>section 문단</p>
+    </section>
+
+    <div id="clock">
+        <span id="hour">시간</span>시
+        <span id="min">분</span>분
+    </div>
+    <p id="test">html</p>
+    <script>
+        let h = 12;
+        let m = 30;
+        document.getElementById('hour').innerHTML = h ;
+        document.getElementById('min').innerHTML = m ;
+        
+        // innerHTML(태그주입가능), innerText(텍스트 그대로 들어감)
+        document.getElementById('test').innerHTML = '<em>em</em>';
+    </script>
+    <script>
+        /** DOM 문서객체조작 **/
+        //  id로 요소를 선택하여 값을 변경
+        document.getElementById('heading1').innerHTML = '제목 바뀜';
+
+        // selector 방식으로 접근
+        document.querySelector('section p').innerHTML = '문단 변경';
+        document.querySelector('section p').style.color = 'blue';
+    </script>
+    <script>
+        // 윈도우 새창 열기
+        // open('http://www.google.com/'); 
+
+        //★setInterval(함수, 시간값)★
+        let timer = setInterval(function() {
+        console.log('hello ');
+        }, 500);
+        // 중단시키기 clearInterval(변수)
+        
+    </script>
+    
+    <button onclick="clearInterval(timer);">
+        중단
+    </button>
+    
+    <button onclick="alert('안녕');">경고창뜨기</button>
+</body>
+</html>
